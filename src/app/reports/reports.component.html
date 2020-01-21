@@ -1,0 +1,73 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <ul>
+                <li id="back-button">
+                    <mat-icon (click)="goBack()">keyboard_arrow_left</mat-icon>
+                </li>
+                <li>Back</li>
+            </ul>
+        </div>
+    </div>
+    <div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start">
+            <div fxFlex="80%" id="document-heading">
+                <p>Certificates</p>
+            </div>
+            <div fxFlex="20%">
+                <!-- <button mat-flat-button color="primary">Add Files</button> -->
+                <label for="files-1" class="btn">Add Files</label>
+                <input id="files-1" style="visibility:hidden;" type="file" (change)="handleFileInput($event.target.files, 'Certificates')">
+            </div>
+        </div>
+        <div *ngIf="isCertificateUploaded else pendingUploads">
+            <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start"
+                *ngFor="let certificate of userClaimObj.certificates; let i=index;" id="claims-block-1">
+                <div fxFlex="5%">
+                    <p>{{i+1}}.</p>
+                </div>
+                <div fxFlex="75%" id="labels">
+                    <p id="document-name">{{certificate.fileName}}</p>
+                    <p id="doc-size">{{certificate.fileSize}}</p>
+                </div>
+                <div fxFlex="20%" id="data">
+                    <button mat-flat-button color="warn" (click)="deleteDocument(i, 'Certificates')">X Delete</button>
+                </div>
+            </div>
+        </div>
+        <hr>
+    </div>
+    <div>
+        <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start">
+            <div fxFlex="80%" id="document-heading">
+                <p>Medical Reports</p>
+            </div>
+            <div fxFlex="20%">
+                <!-- <button mat-flat-button color="primary">Add Files</button> -->
+                <label for="files-2" class="btn">Add Files</label>
+                <input id="files-2" style="visibility:hidden;" type="file" (change)="handleFileInput($event.target.files, 'MedicalReports')">
+            </div> 
+        </div>
+        <div *ngIf="isMedicalUploaded else pendingUploads">
+            <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start"
+                *ngFor="let medical of userClaimObj.medicalReports; let i=index;" id="claims-block-2">
+                <div fxFlex="5%">
+                    <p>{{i+1}}.</p>
+                </div>
+                <div fxFlex="75%" id="labels">
+                    <p id="document-name">{{medical.fileName}}</p>
+                    <p id="doc-size">{{medical.fileSize}}</p>
+                </div>
+                <div fxFlex="20%" id="data">
+                    <button mat-flat-button color="warn" (click)="deleteDocument(i, 'MedicalReports')">X Delete</button>
+                </div>
+            </div>
+        </div>
+        <ng-template #pendingUploads>
+            <div id="pending-files">
+                <p>Files are pending, please add.</p>
+            </div>
+        </ng-template>
+        <hr>
+    </div>
+</div>

@@ -1,0 +1,16 @@
+a {
+    text-decoration: none;
+}
+// ::ng-deep .mat-tab-labels{
+//     justify-content: center; /* align items in Main Axis */
+    
+// }
+
+::ng-deep .mat-tab-link {
+    width: -webkit-fill-available;
+}
+
+::ng-deep .mat-tab-link-active {
+    width: -webkit-fill-available;
+    border-bottom: 3px solid #00ff15;
+}

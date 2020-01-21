@@ -1,0 +1,78 @@
+ul {
+    margin-top: 10px;;
+    padding: 0px;
+    list-style: none;
+    float:left; //this aligns your texts in the horizontal direction
+    height: 10px; // sets the height of the ul block with a value of 40 pixels
+}
+
+li {
+    float: left;
+    width: auto; // sets the width of the li elements 200 pixels apart horizontally.
+}
+hr {
+    margin-top: 20px;
+    border-top: 1.5px solid rgb(222, 222, 223);
+}
+// .mat-flat-button.mat-primary {
+//     background-color: #212d6e;
+//     height: 27px;
+//     line-height: 1px;
+//     width: 100px;
+//     // width: -webkit-fill-available;
+//     padding: 5px;
+// }
+
+.mat-flat-button.mat-warn {
+    height: 27px;
+    line-height: 1px;
+    width: 100px;
+    margin-top: 5px;
+    // width: -webkit-fill-available;
+    padding: 5px;
+}
+#claims-block-1, #claims-block-2, #pending-files {
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;;
+    margin-top : 10px;
+    margin-bottom : 10px;
+    background-color: rgba(247, 245, 245, 0.952);
+    border: 2px solid rgb(238, 237, 237);
+    box-shadow: none;
+    font-family: inherit;
+}
+#document-heading, #pending-files{
+    width: 970px;
+    font-size: 20px;
+}
+#pending-files{
+    width: 100%;
+    font-size: 18px;
+
+}
+#document-name {
+    width: -webkit-fill-available;
+    margin: 0px;
+}
+
+#doc-size {
+    font-size: 12px;
+}
+// #labels {
+//     font-weight: bold;
+// }
+
+label {
+    // display: none;
+    display:inline-block;
+    background-image: none;
+    background-color: #212d6e;
+    height: 27px;
+    line-height: 16px;
+    width: 100px;
+    padding: 5px;
+    color: white;
+    font-size: 15px;
+}

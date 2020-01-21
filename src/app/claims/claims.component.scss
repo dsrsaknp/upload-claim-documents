@@ -1,0 +1,39 @@
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+.material-icons {
+  font-size: 20px;
+}
+#green-tick-icon {
+  color: green;
+}
+
+#pending-icon {
+  color: orange;
+}
+
+#cross-icon {
+  color: rgb(197, 7, 7);
+}
+
+li {
+  float: left;
+  width: auto; // sets the width of the li elements 200 pixels apart horizontally.
+}
+#claims-block {
+    border-radius: 13px;
+    padding: 15px;
+    margin-top : 10px;
+    margin-bottom : 10px;
+    background-color: rgba(247, 245, 245, 0.952);
+    border: 2px solid rgb(238, 237, 237);
+    box-shadow: none;
+    font-family: inherit;
+}
+#show-details{
+  padding-top: 4.4rem;
+}
+#right-arrow {
+  cursor: pointer;
+}

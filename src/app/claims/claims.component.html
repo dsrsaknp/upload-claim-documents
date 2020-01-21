@@ -1,0 +1,33 @@
+<div class="container">
+    <div fxLayout="row" fxLayoutWrap fxLayoutGap="0.5%" fxLayoutAlign="start"
+        *ngFor="let claim of claims; let i=index;" id="claims-block">
+        <div fxFlex="50%" id="labels">
+            <p>Patient name</p>
+            <p>Claim Number</p>
+            <p>Date submitted</p>
+            <p>Document Status</p>
+        </div>
+        <div fxFlex="50%" id="data">
+            <p>{{claim.patientName}}</p>
+            <p>{{claim.claimNumber}}</p>
+            <p>{{claim.dateSubmitted}}</p>
+            <ul>
+                <li id="green-tick-icon" *ngIf="claim.documentStatus === 'Completed'">
+                    <mat-icon>check_circle</mat-icon>
+                </li>
+                <li id="pending-icon" *ngIf="claim.documentStatus === 'Additional Info Required'">
+                    <mat-icon>error</mat-icon>
+                </li>
+                <li id="cross-icon" *ngIf="claim.documentStatus === 'Not Received'">
+                    <mat-icon>highlight_off</mat-icon>
+                </li>
+                <li>{{claim.documentStatus}}</li>
+            </ul>
+        </div>
+        <div fxFlex="10%" id="show-details">
+            <span (click)="showDetails(i)" id="right-arrow">
+                <mat-icon>keyboard_arrow_right</mat-icon>
+            </span>
+        </div>
+    </div>
+</div>
