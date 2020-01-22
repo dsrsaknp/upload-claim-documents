@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-// import { MockDataService } from '../shared/services/mock-data.service';
 import { UserMockData } from '../shared/models/user-mock-data.model';
 import { DocModel } from '../shared/models/doc.model';
 import { DataService } from '../shared/services/data.service';

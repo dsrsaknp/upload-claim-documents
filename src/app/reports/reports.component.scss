@@ -4,6 +4,7 @@ ul {
     list-style: none;
     float:left; //this aligns your texts in the horizontal direction
     height: 10px; // sets the height of the ul block with a value of 40 pixels
+    cursor: pointer;
 }
 
 li {
@@ -14,14 +15,6 @@ hr {
     margin-top: 20px;
     border-top: 1.5px solid rgb(222, 222, 223);
 }
-// .mat-flat-button.mat-primary {
-//     background-color: #212d6e;
-//     height: 27px;
-//     line-height: 1px;
-//     width: 100px;
-//     // width: -webkit-fill-available;
-//     padding: 5px;
-// }
 
 .mat-flat-button.mat-warn {
     height: 27px;
